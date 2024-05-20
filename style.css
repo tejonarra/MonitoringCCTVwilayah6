@@ -1,0 +1,57 @@
+.cctv-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.container {
+  width: 80%; /* Atur lebar container */
+  margin: 0 auto; /* Atur margin atas dan bawah menjadi 0 dan auto untuk menjaga container tetap berada di tengah */
+  padding: 20px; /* Atur padding untuk memberikan ruang di dalam container */
+  box-sizing: border-box; /* Pastikan padding tidak menambah lebar total container */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Butoon */
+a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+}
+
+a span {
+  position: relative;
+  z-index: 2;
+}
+
+a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #f80016;
+  transition: all 0.35s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+a:hover:after {
+  width: 100%;
+}
